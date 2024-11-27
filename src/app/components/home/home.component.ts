@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
+import { Producto } from '../../models/producto';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ import { ProductoService } from '../../services/producto.service';
 export class HomeComponent implements OnInit {
 
 
-  producto:any;
+  // Actualizamos esta variable a un arreglo de tipo Producto
+  producto: Producto[] = [];
 
   constructor(private productoService: ProductoService){}
 
@@ -19,8 +21,8 @@ export class HomeComponent implements OnInit {
     // Traemos el array de objetos que tenemos en nuestro '/assets/producto.json'
     this.productoService.getProducto()
     .subscribe({
-      next: (producto: any) => {
-        // Seteamos el valor del producto definido en next a la variable global 'producto: any'
+      next: (producto: Producto[]) => {
+
         this.producto = producto
         console.log(this.producto);
       },
