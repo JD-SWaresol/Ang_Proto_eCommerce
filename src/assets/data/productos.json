@@ -53,10 +53,10 @@
         "descripcion": "Rojos",
         "categoria": ["Microfonos", "Tecnologia"],
         "imageUrl": [
-            "../../assets/img/products/technology/3.jpg",
+            "../../assets/img/products/technology/4.jpg",
             "../../assets/img/products/technology/1.jpg",
             "../../assets/img/products/technology/2.jpg",
-            "../../assets/img/products/technology/4.jpg"
+            "../../assets/img/products/technology/3.jpg"
         ],
         "precio_venta": 245,
         "precio_regular": 445,
