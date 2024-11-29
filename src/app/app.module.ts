@@ -12,6 +12,7 @@ import { SingupComponent } from './components/singup/singup.component';
 import { ProductoListComponent } from './components/producto-list/producto-list.component';
 import { ProductoItemComponent } from './components/producto-item/producto-item.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { PaymentCardComponent } from './components/payment-card/payment-card.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductoComponent } from './components/producto/producto.component';
     SingupComponent,
     ProductoListComponent,
     ProductoItemComponent,
-    ProductoComponent
+    ProductoComponent,
+    PaymentCardComponent
   ],
   imports: [
     BrowserModule,
