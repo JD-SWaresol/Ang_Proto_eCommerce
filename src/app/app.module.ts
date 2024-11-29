@@ -11,6 +11,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { SingupComponent } from './components/singup/singup.component';
 import { ProductoListComponent } from './components/producto-list/producto-list.component';
 import { ProductoItemComponent } from './components/producto-item/producto-item.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProductoItemComponent } from './components/producto-item/producto-item.
     SigninComponent,
     SingupComponent,
     ProductoListComponent,
-    ProductoItemComponent
+    ProductoItemComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
