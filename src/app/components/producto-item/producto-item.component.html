@@ -6,7 +6,8 @@
 
       <!-- Indicamos que traiga la imagen y en caso de no encontrarla se va a mostrar el nombre -->
       <img alt="ecommerce" class="object-cover object-center w-full h-full block" 
-      [src]="producto ? producto.imageUrl[0] : ''" [alt]="producto?.nombre">
+      [src]="producto ? producto.imageUrl[0] : ''" [alt]="producto?.nombre"
+      [routerLink]="['producto', producto?._id]">
     </a>
     <div class="mt-4">
     <!-- <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3> -->
