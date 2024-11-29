@@ -73,6 +73,25 @@
 # el observable '1-2-3' no emitirá ningun numero hasta que ya se haya suscrito alguien para llamar el metodo 'subscribe()' del observable
 
 
++ Activated Route
+
+# Esta sesion busca traer los detalles de un producto y al dar clic en una imagen del producto, se debe traer el producto.
+# El 'Activated Route' propórciona un acceso a informacion de rutas asociadas a un componente que se carga en una salida. Uselo 
+# para recorrer el arbol 'RouterState' y exrtaer informacion de los nodos
+
+
++ slug
+
+# Atributo dentro de los productos creados, estos tienen un valor que divide dos categorias con un guion, es decir '-'. Estos se debe a 
+# que una URL no puede ocupar un espacio en blanco.
+
+
++ snapshot (Instantanteas de seguridad)
+
+# copias de un instante determinado de los archivos, permiten recuperar carpetas y archivos. Estas trabajan sobre el origen de los datos.
+# Son un elemento de seguridad informatica complemetarias a las copias de seguridad o backups.
+# No se recomienda el uso de VSS (Volumen snapshot service) como unico sistema de seguridad para la informacion
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////// URL REF: https://www.youtube.com/watch?v=1HdF-apLfLM ////////////////////////////////////////
