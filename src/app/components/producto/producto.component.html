@@ -93,6 +93,19 @@
             </button>
           </div>
         </div>
+
+        <!-- Colocamos debajo de la imagen principal la imagen usada para la galeria de imagenes -->
+        <!-- Con ngFor hacemos un recorrido de las imagenes de los productos en base a 'producto.imageUrl' -->
+        <div class="lg:w-7/6 flex flex-wrap" *ngFor="let itemImg of producto?.imageUrl">
+          
+          <!-- Indicamos que nos traiga la imagen recorrida actualmente (itemImg) -->
+          <!-- Removemos el [alt]=producto?.name ya que no tenemos otro objeto que nos indique quien es ese nombre -->
+          <!-- Ajustamos los tamaños de las imagenes mostradas dentro de las galeria-->
+          <!-- Agregamos un border hover -->
+          <img class="lg:w-7/6 lg:h-24 h-12 object-cover object-center border border-slate-300 hover:border-slate-400 rounded" src="https://dummyimage.com/400x400"
+          [src]="itemImg">
+        </div>
+        
       </div>
     </div>
   </section>
