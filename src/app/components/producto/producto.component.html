@@ -4,12 +4,15 @@
 
         <!-- 'src' va a traer una imagen temporal (currentImg) y luego la va a renderizar -->
         <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400"
-          [src]="currentImg">
+          [src]="currentImg" [alt]="producto?.nombre">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
 
-          <!-- Añadimos la info del nombre del producto para mostrarlo -->
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ producto?.nombre }}</h1>
+          <!-- Actualizamos para mostrar puntos Suspensivos en el nombre -->
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
+            {{ producto?.nombre?.substring(0,20) }} 
+            {{ producto && producto.nombre[21] ? "..." : null }}
+          </h1>
           <div class="flex mb-4">
             <span class="flex items-center">
               <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
