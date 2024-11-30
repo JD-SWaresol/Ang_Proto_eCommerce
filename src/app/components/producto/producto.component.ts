@@ -63,4 +63,10 @@ export class ProductoComponent implements OnInit, OnDestroy{
   ngOnDestroy(): void {
     this.productoSub?.unsubscribe();
   }
+
+
+  // Indicamos con esta funcion que el recorrido que este realizando en la posicion cero, ahora esta haciendo atraves de 'itemImg'
+  handledChangeImg(itemImg: string){
+    this.currentImg = itemImg;
+  }
 }

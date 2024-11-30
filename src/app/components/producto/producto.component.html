@@ -105,8 +105,10 @@
           <!-- Removemos el [alt]=producto?.name ya que no tenemos otro objeto que nos indique quien es ese nombre -->
           <!-- Ajustamos los tamaños de las imagenes mostradas dentro de las galeria-->
           <!-- Agregamos un border hover -->
+          <!-- Este evento trae un item de Img y es el que va a rescatar del recorrido que se esta trayendo-->
+          <!-- Llama el metodo 'handledChangeImg' para que se pueda mostrar una imagen seleccionada del carrucel-->
           <img class="lg:w-7/6 lg:h-24 h-12 object-cover object-center border border-slate-300 hover:border-slate-400 rounded" src="https://dummyimage.com/400x400"
-          [src]="itemImg">
+          [src]="itemImg" (click)="handledChangeImg(itemImg)">
         </div>
         
       </div>
