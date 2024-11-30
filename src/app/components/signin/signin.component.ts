@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SigninComponent {
 
+  login(){
+    console.log("Envio de datos");
+  }
 }
