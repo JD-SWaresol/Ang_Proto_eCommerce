@@ -17,14 +17,39 @@
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               formControlName="email"
               required>
+
+              <!-- Se va a realizar un envio de leyenda del Login Form -->
+              <!-- Detecta que en los campos email y password sean invalidos-->
+              
+              <!-- Detecta si se encuentra alguna basura o que si el campo (Email) ha sido tocado muestra la leyenda de CorreoIncorrecto -->
+              <div *ngIf="loginForm.controls['email'].invalid && 
+                          loginForm.controls['email'].dirty || loginForm.controls['email'].touched">
+                <!--Leyenda: Indica que el campo email es requerido-->
+                <div class="text-danger" *ngIf="loginForm.controls['email'].errors.required">
+                  Correo Incorrecto
+                </div>
+              </div>
+
           </div>
           
           <div class="relative mb-4">
             <label for="password" class="leading-7 text-sm text-gray-600">Contraseña</label>
+
+            <!-- Autocomplete = off, por seguridad de la controaseña  -->
             <input type="password" id="password" name="password" 
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              formControlName="password"
+              formControlName="password" autocomplete="off"
               required>
+
+              <!-- Realizamos el mismo proceso de seguridad para Password, como en el caso de Email -->
+              <div *ngIf="loginForm.controls['password'].invalid && 
+                          loginForm.controls['password'].dirty || loginForm.controls['password'].touched">
+                
+                <div class="text-danger" *ngIf="loginForm.controls['password'].errors.required">
+                  Contraseña Incorrecta
+                </div>
+              </div>
+
           </div>
           
           <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
