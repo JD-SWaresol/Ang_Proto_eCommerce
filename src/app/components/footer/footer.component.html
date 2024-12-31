@@ -24,7 +24,12 @@
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIAS</h2>
           <nav class="list-none mb-10">
-            <li>
+            
+            <li *ngFor="let category of categories">
+              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">{{category.name}}</a>
+            </li>
+
+            <!-- <li>
               <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">Computo</a>
             </li>
             <li>
@@ -35,7 +40,7 @@
             </li>
             <li>
               <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">Libros Digitales</a>
-            </li>
+            </li>-->
           </nav>
         </div>
         <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
