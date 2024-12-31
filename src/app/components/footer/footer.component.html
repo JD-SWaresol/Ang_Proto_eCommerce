@@ -26,40 +26,11 @@
           <nav class="list-none mb-10">
             
             <li *ngFor="let category of categories">
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">{{category.name}}</a>
+              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories/{{category.id}}" ng-reflect-router-link="categories" href="/categories/{{category.id}}">{{category.name}}</a>
             </li>
-
-            <!-- <li>
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">Computo</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">Música</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">Video Juegos</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories" ng-reflect-router-link="categories" href="/categories">Libros Digitales</a>
-            </li>-->
+            
           </nav>
         </div>
-        <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">FORMAS DE PAGO</h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Pago a crédito o débito</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800"> Tarjetas de regalo</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Pago en efectivo</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800"> Pago a meses</a>
-            </li>
-          </nav>
-        </div> -->
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">INFORMACIÓN</h2>
           <nav class="list-none mb-10">

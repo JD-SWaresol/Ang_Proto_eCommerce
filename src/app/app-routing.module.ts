@@ -14,7 +14,7 @@ const routes: Routes = [
   //Insertamos el path para Producto y el Id con el que vamos a identificar la consulta
   {path: 'producto/:id', component: ProductoComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'categories', component: CategoriesComponent}
+  {path: 'categories/:id', component: CategoriesComponent}
 ];
 
 @NgModule({
