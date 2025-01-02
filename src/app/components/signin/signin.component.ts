@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-signin',
@@ -13,7 +14,7 @@ export class SigninComponent {
 
   private fb = new FormBuilder;
 
-  constructor(fb:FormBuilder){
+  constructor(fb:FormBuilder, private cookieService: CookieService){
 
   }
 
@@ -43,6 +44,13 @@ export class SigninComponent {
     //En caso de que los campos sean correctos redirecciona a Index (Primer prueba)
     if (this.loginForm.controls['email'].value === 'ydelgado@example.com' && this.loginForm.controls['password'].value === '123') {
       console.log('Ingresaste con Exito!!!');
+      this.cookieService.set('name', 'Test Cookie');
     }
+    else {
+      this.cookieService.delete('name');
+      console.log('Error al Ingresar!!!');
+      return
+    }
+    console.log('Cookie: ' + this.cookieService.get('name'));
   }
 }

@@ -17,6 +17,7 @@ import { PaymentCardComponent } from './components/payment-card/payment-card.com
 import { AboutUsComponent } from './components/know-us/about-us/about-us.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SuscribeComponent } from './components/suscribe/suscribe.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { SuscribeComponent } from './components/suscribe/suscribe.component';
     ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
