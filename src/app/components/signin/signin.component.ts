@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -14,7 +15,9 @@ export class SigninComponent {
 
   private fb = new FormBuilder;
 
-  constructor(fb:FormBuilder, private cookieService: CookieService){
+  private router = new Router;
+
+  constructor(fb:FormBuilder, private cookieService: CookieService, router: Router){
 
   }
 
@@ -45,10 +48,14 @@ export class SigninComponent {
     if (this.loginForm.controls['email'].value === 'ydelgado@example.com' && this.loginForm.controls['password'].value === '123') {
       console.log('Ingresaste con Exito!!!');
       this.cookieService.set('name', 'Test Cookie');
+      
+      //Redirecciona a Index una vez que se ingreso con Exito
+      this.router.navigate(['/suscribe'])
     }
     else {
       this.cookieService.delete('name');
       console.log('Error al Ingresar!!!');
+      console.log('Cookie: ' + this.cookieService.get('name'));
       return
     }
     console.log('Cookie: ' + this.cookieService.get('name'));
