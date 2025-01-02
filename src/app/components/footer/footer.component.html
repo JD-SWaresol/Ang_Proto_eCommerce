@@ -26,7 +26,10 @@
           <nav class="list-none mb-10">
             
             <li *ngFor="let category of categories">
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/categories/{{category.id}}" ng-reflect-router-link="categories" href="/categories/{{category.id}}">{{category.name}}</a>
+              <a class="text-gray-600 hover:text-gray-800" id="{{category.name}}"
+                routerLink="/categories/{{category.id}}" 
+                  ng-reflect-router-link="categories" 
+                    href="#{{category.name}}">{{category.name}}</a>
             </li>
             
           </nav>
@@ -35,7 +38,10 @@
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SIGUENOS</h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800" routerLink="/suscribe" ng-reflect-router-link="suscribe" href="/suscribe">Suscribirse</a>
+              <a class="text-gray-600 hover:text-gray-800" id="suscribe"
+                routerLink="/suscribe" 
+                  ng-reflect-router-link="suscribe" 
+                    href="#suscribe">Suscribirse</a>
             </li>
           </nav>
         </div>
