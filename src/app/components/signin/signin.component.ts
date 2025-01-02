@@ -35,5 +35,14 @@ export class SigninComponent {
 
     // Si los campos requeridos son validos, muestra la informacion en consola
     console.log(this.loginForm);
+
+    //Mostramos en Consola el contenido del FormGroup (email y password)
+    console.log('Email: ' + this.loginForm.controls['email'].value);
+    console.log('Passw: ' + this.loginForm.controls['password'].value);
+
+    //En caso de que los campos sean correctos redirecciona a Index (Primer prueba)
+    if (this.loginForm.controls['email'].value === 'ydelgado@example.com' && this.loginForm.controls['password'].value === '123') {
+      console.log('Ingresaste con Exito!!!');
+    }
   }
 }
