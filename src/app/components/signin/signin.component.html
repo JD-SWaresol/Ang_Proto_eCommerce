@@ -23,7 +23,7 @@
               
               <!-- Detecta si se encuentra alguna basura o que si el campo (Email) ha sido tocado muestra la leyenda de CorreoIncorrecto -->
               <div *ngIf="loginForm.controls['email'].invalid && 
-                          loginForm.controls['email'].dirty || loginForm.controls['email'].touched">
+                          (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
                 <!--Leyenda: Indica que el campo email es requerido-->
                 <div class="text-danger" *ngIf="loginForm.controls['email'].errors.required">
                   Correo Incorrecto
@@ -43,7 +43,7 @@
 
               <!-- Realizamos el mismo proceso de seguridad para Password, como en el caso de Email -->
               <div *ngIf="loginForm.controls['password'].invalid && 
-                          loginForm.controls['password'].dirty || loginForm.controls['password'].touched">
+                          (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
                 
                 <div class="text-danger" *ngIf="loginForm.controls['password'].errors.required">
                   Contraseña Incorrecta
