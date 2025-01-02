@@ -16,6 +16,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { PaymentCardComponent } from './components/payment-card/payment-card.component';
 import { AboutUsComponent } from './components/know-us/about-us/about-us.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { SuscribeComponent } from './components/suscribe/suscribe.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     ProductoComponent,
     PaymentCardComponent,
     AboutUsComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    SuscribeComponent
   ],
   imports: [
     BrowserModule,
