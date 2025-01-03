@@ -41,4 +41,13 @@ export class HeaderComponent {
     }
   }
 
+  isValid(){
+    if (this.email){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }
