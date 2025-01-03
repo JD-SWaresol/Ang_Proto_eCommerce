@@ -18,6 +18,7 @@ import { AboutUsComponent } from './components/know-us/about-us/about-us.compone
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SuscribeComponent } from './components/suscribe/suscribe.component';
 import { CookieService } from 'ngx-cookie-service';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CookieService } from 'ngx-cookie-service';
     PaymentCardComponent,
     AboutUsComponent,
     CategoriesComponent,
-    SuscribeComponent
+    SuscribeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
