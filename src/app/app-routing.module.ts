@@ -7,6 +7,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { AboutUsComponent } from './components/know-us/about-us/about-us.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SuscribeComponent } from './components/suscribe/suscribe.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'producto/:id', component: ProductoComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'categories/:id', component: CategoriesComponent},
-  {path: 'suscribe', component: SuscribeComponent}
+  {path: 'suscribe', component: SuscribeComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
