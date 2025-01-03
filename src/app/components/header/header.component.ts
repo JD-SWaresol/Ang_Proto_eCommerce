@@ -50,4 +50,9 @@ export class HeaderComponent {
     }
   }
 
+  closeSesion(){
+    this.email = '';
+    this.cookieService.delete('name');
+  }
+
 }
