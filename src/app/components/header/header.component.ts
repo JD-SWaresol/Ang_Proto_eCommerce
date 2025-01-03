@@ -22,7 +22,7 @@ export class HeaderComponent {
     this.suscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         //Captura la variable de sesión
-        this.email = this.cookieService.get('name');
+        this.email = this.cookieService.get('email');
         console.log('HEADER: ' + this.email);
         this.router.navigated = false;
       }
@@ -52,7 +52,7 @@ export class HeaderComponent {
 
   closeSesion(){
     this.email = '';
-    this.cookieService.delete('name');
+    this.cookieService.delete('email');
   }
 
 }

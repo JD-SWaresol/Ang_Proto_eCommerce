@@ -47,17 +47,17 @@ export class SigninComponent {
     //En caso de que los campos sean correctos redirecciona a Index (Primer prueba)
     if (this.loginForm.controls['email'].value === 'ydelgado@example.com' && this.loginForm.controls['password'].value === '123') {
       console.log('Ingresaste con Exito!!!');
-      this.cookieService.set('name', 'Test Cookie');
+
+      // Cookie de sesión con la que vamos a trabajar
+      this.cookieService.set('email', this.loginForm.controls['email'].value);
       
       //Redirecciona a Index una vez que se ingreso con Exito
-      this.router.navigate(['/suscribe'])
+      this.router.navigate(['/'])
     }
     else {
-      this.cookieService.delete('name');
+      alert('Correo o Contraseña incorrectos!!');
       console.log('Error al Ingresar!!!');
-      console.log('Cookie: ' + this.cookieService.get('name'));
       return
     }
-    console.log('Cookie: ' + this.cookieService.get('name'));
   }
 }
