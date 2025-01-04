@@ -1,5 +1,5 @@
 <section class="text-gray-600 body-font">
-  <div *ngIf="isValid();then content else other_content">here is ignored</div>
+  <div *ngIf="!isValid();then content else other_content">here is ignored</div>
     <ng-template #content>
      <app-signin></app-signin> 
     </ng-template>
