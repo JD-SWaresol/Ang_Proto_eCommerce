@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Producto } from '../../models/producto';
 import { ProductoService } from '../../services/producto.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-producto',
@@ -11,6 +12,10 @@ import { ProductoService } from '../../services/producto.service';
 })
 // Implementamos un OnDestroy
 export class ProductoComponent implements OnInit, OnDestroy{
+
+  email: string | undefined;
+
+  private router = new Router;
 
   slug: string | undefined;
 
@@ -31,12 +36,14 @@ export class ProductoComponent implements OnInit, OnDestroy{
 
   // - Damos acceso a rutas asociadas sobre el componente Producto
   // - Creamos un ProductoService, para desuscribirse
-  constructor(private route:ActivatedRoute, private productoService: ProductoService){
+  constructor(private route:ActivatedRoute, private productoService: ProductoService, private cookieService: CookieService){
 
   }
 
 
   ngOnInit(): void {
+
+    this.email = this.cookieService.get('email');
 
     // Traemos la propiedad slug que identifica (id) al producto que hemos seleccionado en base al ActivatedRoute con 'route'
     this.slug = this.route.snapshot.params['id'];
@@ -71,7 +78,13 @@ export class ProductoComponent implements OnInit, OnDestroy{
   }
 
   addProduct(){
-    alert ("Producto " + this.slug + " agregado!!!");
+    if (this.email){
+      alert ("Producto " + this.slug + " agregado!!!");  
+    }
+    else {
+      this.router.navigate(['/signin']);
+    
+    }
   }
 
   buyProduct(){
