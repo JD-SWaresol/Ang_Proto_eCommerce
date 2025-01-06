@@ -69,4 +69,8 @@ export class ProductoComponent implements OnInit, OnDestroy{
   handledChangeImg(itemImg: string){
     this.currentImg = itemImg;
   }
+
+  buyProduct(){
+    alert("Producto " + this.slug + " comprado!!!");
+  }
 }
