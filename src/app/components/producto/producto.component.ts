@@ -88,6 +88,11 @@ export class ProductoComponent implements OnInit, OnDestroy{
   }
 
   buyProduct(){
-    alert("Producto " + this.slug + " comprado!!!");
+    if (this.email){
+      alert("Producto " + this.slug + " comprado!!!");
+    }
+    else {
+      this.router.navigate(['/signin']);
+    }
   }
 }
