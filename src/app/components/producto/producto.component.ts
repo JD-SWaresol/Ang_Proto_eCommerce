@@ -70,6 +70,10 @@ export class ProductoComponent implements OnInit, OnDestroy{
     this.currentImg = itemImg;
   }
 
+  addProduct(){
+    alert ("Producto " + this.slug + " agregado!!!");
+  }
+
   buyProduct(){
     alert("Producto " + this.slug + " comprado!!!");
   }
