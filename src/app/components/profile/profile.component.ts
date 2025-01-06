@@ -19,6 +19,12 @@ export class ProfileComponent {
 
   ngOnInit(): void {
     this.email = this.cookieService.get('email');
+    if (this.email) {
+      console.log('Este es el email ==> ' + this.email);
+    }
+    else {
+      console.log('Email Indefinido!!! ' + this.email);
+    }
   }
 
   isValid(){
@@ -26,7 +32,6 @@ export class ProfileComponent {
       return true;
     }
     else {
-      this.router.navigate(['/signin'])
       return false;
     }
   }
